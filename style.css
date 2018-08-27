@@ -1,0 +1,202 @@
+/**********************************************
+****************** GENERAL ********************
+**********************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: #555;
+}
+
+.wrapper {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.panel-data,
+.panel-result {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 50px;
+    padding-top:150px;
+}
+
+
+
+/**********************************************
+*** COMPONENTS
+**********************************************/
+
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { font-weight: 600; }
+button:hover i { margin-right: 20px; }
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: #EB4D4D;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+.btn-add-input {
+    text-align: left;
+    position: absolute;
+    top: 45px;
+    left: 150px;
+    width: 260px;
+}
+
+.btn-subtract-input {
+    text-align: left;
+    position: absolute;
+    left: 150px; 
+    top: 85px;
+    width: 260px;
+}
+
+.btn-run-map {
+    text-align: left;
+    position: absolute;
+    left: 150px; 
+    top: 520px;
+    width: 260px;
+}
+
+.btn-change-bin{
+    text-align: left;
+    left: 425px;
+    right: 0px;
+    size:10px;
+    font-size: 10px;
+    font-weight: 10;
+    width: 0px;
+    vertical-align:middle;
+}
+
+.ion-arrow-swap:hover {
+    color: #c97b7b;
+}
+
+.ion-arrow-swap{
+    height: 0px;
+    top: 0px;
+    padding: 0px;
+    font-size: 20px;
+    margin-top: 0px;
+}
+td {    
+    border: 2px solid #EB4D4D;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.th-result{
+    background-color: #EB4D4D;
+}
+
+.td-result{
+    background-color: #ffffe6;
+    color: #EB4D4D;
+    padding-left: 20px;
+    padding-right: 40px;
+    width: 60px;
+    text-align: left;
+    font-weight: bold;
+}
+
+th {
+    border: 2px solid #EB4D4D;
+    background-color: #d64d4d;
+    color: white;
+    text-align: center;
+}
+
+td {
+    height: 0px;
+    padding: 0px;
+}
+
+.table-result{
+    width: 0px;
+}
+
+.th-index {
+    float: left;
+    width: 54px;
+    height: 54px;
+    background-color: #EB4D4D;
+    font-size:20px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+}
+.result {
+    float: left;
+    width: 54px;
+    height: 54px;
+    background-color: #fff;
+    font-size:40px;
+    font-weight: bold;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+}
+
+.change-bin{
+    border-color: none;
+    border: 0px;
+}
+.winner { background-color: #f7f7f7; }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
